@@ -1,0 +1,18 @@
+syntax = "proto3";
+package db;
+
+message ArithRequest {
+    int32 a = 1;
+    int32 b = 2;
+}
+
+message ArithResponse {
+    int32 pro = 1;
+    int32 quo = 2;
+    int32 rem = 3;
+}
+
+service ArithService {
+    rpc multiply (ArithRequest) returns (ArithResponse);    // 乘法运算方法
+    rpc divide (ArithRequest) returns (ArithResponse);      // 除法运算方法
+}

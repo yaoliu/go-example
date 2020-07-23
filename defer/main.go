@@ -4,6 +4,13 @@ package main
 
 import "fmt"
 
+func Recovery() {
+	panic(1)
+	defer func() {
+		recover()
+	}()
+}
+
 func Default() {
 	defer func() {
 		fmt.Println(1)

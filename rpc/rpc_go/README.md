@@ -1,0 +1,1 @@
+protoc -I ../pb hello.proto --go_out=plugins=grpc:pb 
